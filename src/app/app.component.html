@@ -1,37 +1,9 @@
-<header>
-    <div class="col-md-6 col-md-offset-3">
-        <h2>Register</h2>
-        <form action="https://api-co-work.herokuapp.com/api/register" method="post" novalidate>
-            <table>
-                <tr>
-                    <td>name</td>
-                    <td><input type="text" name="name" required /><br></td>
-                </tr>
-                <tr>
-                    <td>email</td>
-                    <td><input type="email" name="email" required pattern="^[a-zA-Z0–9_.+-]+@[a-zA-Z0–9-]+.[a-zA-Z0–9-.]+$" /><br></td>
-                </tr>
-                <tr>
-                    <td>password</td>
-                    <td><input type="password" name="password" required /><br></td>
-                </tr>
-                <tr>
-                    <td>confirm password</td>
-                    <td><input type="password" name="confirmPassword"  required /><br></td>
-                </tr>
-                <tr>
-                    <td>image</td>
-                    <td><input type="file" name="image"  required /><br></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><button>Register</button></td>
-                </tr>
-            </table>
-        </form>
-    </div>
-</header>
+<div class="container">
+    <header>
+        <h1>Provider register</h1>
+    </header>
 
-<section id="main">
-    <app-register></app-register>
-</section>
+    <section id="main">
+        <app-register></app-register>
+    </section>
+</div>
