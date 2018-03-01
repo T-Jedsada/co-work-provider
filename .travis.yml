@@ -1,0 +1,14 @@
+language: node_js
+
+notifications:
+    slack: 20scoopscnx:MHXX5rImwvTFSMK0JiJfa7ur
+
+node_js:
+   - "8.9.4"
+
+before_script:
+   - npm install -g firebase-tools
+   - npm install -g @angular/cli
+
+script:
+   - npm run build
