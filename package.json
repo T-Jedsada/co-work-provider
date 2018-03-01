@@ -9,11 +9,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "preinstall": "npm install -g angular-cli",
     "postinstall": "ng build"
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "^1.7.2",
+    "@angular/compiler-cli": "^5.2.7",
     "@angular/animations": "^5.2.7",
     "@angular/common": "^5.2.7",
     "@angular/compiler": "^5.2.7",
