@@ -1,3 +1,31 @@
-h1{
-    color: aqua;
+.center-page {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sing-up-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.input-full-width {
+    width: 100%;
+}
+
+.head-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
 }

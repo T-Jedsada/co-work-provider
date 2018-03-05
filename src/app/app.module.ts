@@ -14,13 +14,13 @@ import { ErrorComponent } from './error/error.component';
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ErrorComponent,
+    ErrorComponent
   ],
   imports: [
       AlertModule.forRoot(),
       BrowserModule,
       AppRouting,
-      MaterialModule,
+      MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
