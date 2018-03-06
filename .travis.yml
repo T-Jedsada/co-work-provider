@@ -11,4 +11,5 @@ before_script:
    - npm install -g @angular/cli
 
 script:
-   - ng build --prod --aot
+feature/form-register-provider
+   - npm run build
