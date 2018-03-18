@@ -1,26 +1,17 @@
-<mat-toolbar color="primary" class="toolbar">
-  <mat-toolbar-row>
-    <span>CO-Work</span>
-    <span class="head-spacer"></span>
-    <button mat-button>About Us</button>
-
-  </mat-toolbar-row>
-</mat-toolbar>
-
-<div class="center-page">
-  <h1>WELCOME CO-Work</h1>
-  <form method="post" class="login-form" action="http://localhost:8000/api/email-login">
-    <mat-form-field class="input-full-width">
-      <input type="email" name="email" matInput placeholder="Email" required>
-    </mat-form-field>
-    <mat-form-field class="input-full-width">
-      <input type="password" name="password" matInput placeholder="Password" required>
-    </mat-form-field>
-    <br>
-    <button type="reset" mat-button>reset</button>
-    <button type="submit" mat-button>submit</button>
-  </form>
-  <br>
-  <p>Forgot password. click <a href="http://localhost:4200/register/forgot-password">here</a></p>
-  <p><a href="http://localhost:4200/register">You can sing up here</a></p>
-</div>
+<div class="row">
+    <div class="col-md-4">
+      <h1>Login</h1>
+      <hr><br>
+      <form (ngSubmit)="onLogin()" novalidate>
+       <div class="form-group">
+         <label for="email">Email</label>
+         <input type="text" class="form-control" id="email" placeholder="enter email" [(ngModel)]="user.email" name="email" required>
+       </div>
+       <div class="form-group">
+         <label for="password">Password</label>
+         <input type="password" class="form-control" id="password" placeholder="enter password" [(ngModel)]="user.password" name="password" required>
+       </div>
+       <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
