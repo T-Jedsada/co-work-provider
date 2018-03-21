@@ -14,6 +14,8 @@ import { Configuration } from '../config/app.constants';
 import { ForgotPasswordComponent } from './auths/register/forgot-password/forgot-password.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { ImageService } from './services/uploads/image.service';
+import { AuthService } from './services/authentication/auth.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { FooterComponent } from './layout/footer/footer.component';
   ],
   providers: [
       UsersService,
-      Configuration
+      Configuration,
+      ImageService,
+      AuthService
   ],
   bootstrap: [AppComponent]
 })

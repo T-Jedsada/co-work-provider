@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { HttpClient } from '@angular/common/http';
-import { Response } from '@angular/http';
 
 import { Configuration } from '../../config/app.constants';
 
@@ -18,7 +17,7 @@ export class UsersService {
      return this.http.get(this.actionUrl);
   }
 
-  public add_users() {
-      return this.http.get(this.actionUrl);
+  public add_users(users) {
+      return this.http.post(this.actionUrl, users);
   }
 }
