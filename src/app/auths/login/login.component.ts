@@ -13,6 +13,9 @@ import {isSuccess} from '@angular/http/src/http_utils';
 })
 export class LoginComponent implements OnInit {
   users: any = {};
+  state = '';
+  error: any;
+
   constructor(private router: Router, private auth: AuthService) {
   }
 
@@ -20,21 +23,26 @@ export class LoginComponent implements OnInit {
   }
 
   onSignIn(form: NgForm) {
-      console.log(form.value);
+      /*console.log(form.value);
       this.users.email = form.value.email;
       this.users.password = form.value.password;
-
+      localStorage.setItem('email', this.users.email);
       this.auth.login(this.users).subscribe(
         success => {
           console.log(success);
           this.users = success;
-          if (this.users.success === true) {
+          console.log(this.users.success);
+          if (this.users.success === false) {
+            console.log(this.users.data.error);
+            this.error = this.users.data.error;
+          } else {
             this.router.navigate(['/home']);
           }
         },
         error => {
-          console.log('k');
+          console.log(error);
+          this.error = this.users.data.error;
         }
-      );
+      );*/
   }
 }

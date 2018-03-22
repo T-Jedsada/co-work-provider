@@ -8,15 +8,24 @@ export class AuthService {
 
   constructor(private http: HttpClient, private configuration: Configuration) {
   }
-
+  test: any = {};
   public login(uers) {
     this.actionUrl = this.configuration.ServerWithApiUrl + 'email-login';
-    return this.http.post(this.actionUrl, uers);
+    this.http.post(this.actionUrl, uers).subscribe(
+      success => {
+        this.test = success;
+        console.log(this.test);
+      }
+    );
   }
 
   public register(user) {
     this.actionUrl = this.configuration.ServerWithApiUrl + 'register';
-    return this.http.post(this.actionUrl, user);
+    this.http.post(this.actionUrl, user).subscribe(
+      success => {
+        return success;
+      }
+    );
   }
 
   public sendEmail(email) {

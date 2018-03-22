@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {UsersService} from '../../services/users.service';
 import {Response} from '@angular/http';
 import {Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
@@ -16,7 +15,7 @@ export class RegisterComponent implements OnInit {
   email: any = {};
   test: any = {};
 
-  constructor(private auth: AuthService, private router: Router, private usersService: UsersService) {
+  constructor(private auth: AuthService, private router: Router) {
   }
 
   ngOnInit() {
@@ -31,9 +30,10 @@ export class RegisterComponent implements OnInit {
     this.user.email = form.value.email;
     this.user.name = form.value.name;
     this.user.password = form.value.password;
-    console.log(form.value);
+    // console.log(form.value.image);
+     console.log(this.auth.login(form.value.email));
     // ---------------------------------------------------------------------
-    this.auth.uploadImage(form.value.image).subscribe(
+    /*this.auth.uploadImage(form.value.image).subscribe(
       res => {
         this.image = res;
         this.user.image = this.image.data.message;
@@ -70,7 +70,7 @@ export class RegisterComponent implements OnInit {
         err => {
           console.log('Error: can not save file image');
         }
-      );
+      );*/
     // ---------------------------------------------------------------------
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-errors',
@@ -8,10 +7,9 @@ import { UsersService } from '../services/users.service';
 })
 export class ErrorsComponent implements OnInit {
 
-  constructor(private usersService: UsersService) {
+  constructor() {
   }
 
   ngOnInit() {
-      console.log(this.usersService.get_users());
   }
 }
