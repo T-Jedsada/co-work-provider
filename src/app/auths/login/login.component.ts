@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AuthService } from '../../services/authentication/auth.service';
+import { NgForm } from '@angular/forms';
+import { AuthService } from '../../services/auth/auth.service';
+import {Response} from '@angular/http';
+import {isSuccess} from '@angular/http/src/http_utils';
 
 @Component({
   selector: 'app-login',
@@ -9,31 +12,29 @@ import { AuthService } from '../../services/authentication/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  model: any = {};
-  loading = false;
-  error = '';
-
-  constructor(
-    private router: Router,
-    private authenticationService: AuthService) {
-    this.login();
+  users: any = {};
+  constructor(private router: Router, private auth: AuthService) {
   }
 
   ngOnInit () {
-    this.authenticationService.logout();
   }
 
-  login() {
-    this.loading = true;
-    this.authenticationService.login(this.model.username, this.model.password)
-      .subscribe(result => {
-        if (result === true) {
-          this.router.navigate(['/']);
-        } else {
-          this.error = 'Username or password is incorrect';
-          this.loading = false;
+  onSignIn(form: NgForm) {
+      console.log(form.value);
+      this.users.email = form.value.email;
+      this.users.password = form.value.password;
+
+      this.auth.login(this.users).subscribe(
+        success => {
+          console.log(success);
+          this.users = success;
+          if (this.users.success === true) {
+            this.router.navigate(['/home']);
+          }
+        },
+        error => {
+          console.log('k');
         }
-      });
+      );
   }
 }
