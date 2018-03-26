@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Response} from '@angular/http';
 import {Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
-import {AuthService} from '../../services/auth/auth.service';
+import {AuthService} from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -33,7 +33,7 @@ export class RegisterComponent implements OnInit {
     // console.log(form.value.image);
      console.log(this.auth.login(form.value.email));
     // ---------------------------------------------------------------------
-    /*this.auth.uploadImage(form.value.image).subscribe(
+    this.auth.uploadImage(form.value.image).subscribe(
       res => {
         this.image = res;
         this.user.image = this.image.data.message;
@@ -70,7 +70,7 @@ export class RegisterComponent implements OnInit {
         err => {
           console.log('Error: can not save file image');
         }
-      );*/
+      );
     // ---------------------------------------------------------------------
   }
 }

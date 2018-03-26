@@ -1,10 +1,10 @@
 ﻿import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './auths/login/login.component';
-import { RegisterComponent } from './auths/register/register.component';
-import { ErrorsComponent} from './404/errors.component';
-import { ForgotPasswordComponent } from './auths/register/forgot-password/forgot-password.component';
-import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './components/auths/login/login.component';
+import { RegisterComponent } from './components/auths/register/register.component';
+import { ErrorsComponent} from './components/404/errors.component';
+import { ForgotPasswordComponent } from './components/auths/register/forgot-password/forgot-password.component';
+import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './services/auth/auth.guard';
 
 const AppRoutes: Routes = [

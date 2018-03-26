@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { NgForm } from '@angular/forms';
-import { AuthService } from '../../services/auth/auth.service';
+import { AuthService } from '../../../services/auth/auth.service';
 import {Response} from '@angular/http';
 import {isSuccess} from '@angular/http/src/http_utils';
 
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSignIn(form: NgForm) {
-      /*console.log(form.value);
+      console.log(form.value);
       this.users.email = form.value.email;
       this.users.password = form.value.password;
       localStorage.setItem('email', this.users.email);
@@ -43,6 +43,6 @@ export class LoginComponent implements OnInit {
           console.log(error);
           this.error = this.users.data.error;
         }
-      );*/
+      );
   }
 }

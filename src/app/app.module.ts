@@ -7,15 +7,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
-import { RegisterComponent } from './auths/register/register.component';
-import { LoginComponent } from './auths/login/login.component';
-import { ErrorsComponent } from './404/errors.component';
+import { RegisterComponent } from './components/auths/register/register.component';
+import { LoginComponent } from './components/auths/login/login.component';
+import { ErrorsComponent } from './components/404/errors.component';
 import { Configuration } from '../config/app.constants';
-import { ForgotPasswordComponent } from './auths/register/forgot-password/forgot-password.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { FooterComponent } from './layout/footer/footer.component';
+import { ForgotPasswordComponent } from './components/auths/register/forgot-password/forgot-password.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 import { AuthService } from './services/auth/auth.service';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './services/auth/auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
