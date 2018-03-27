@@ -12,12 +12,14 @@ import { LoginComponent } from './components/auths/login/login.component';
 import { ErrorsComponent } from './components/404/errors.component';
 import { Configuration } from '../config/app.constants';
 import { ForgotPasswordComponent } from './components/auths/register/forgot-password/forgot-password.component';
-import { HeaderComponent } from './components/layout/header/header.component';
-import { FooterComponent } from './components/layout/footer/footer.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 import { AuthService } from './services/auth/auth.service';
-import { HomeComponent } from './components/home/home.component';
 import { AuthGuard } from './services/auth/auth.guard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FixedpluginComponent } from './components/shared/fixedplugin/fixedplugin.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     ErrorsComponent,
     ForgotPasswordComponent,
-    HeaderComponent,
     FooterComponent,
-    HomeComponent,
+    DashboardComponent,
+    FixedpluginComponent,
+    NavbarComponent,
+    SidebarComponent,
   ],
   imports: [
       AlertModule.forRoot(),

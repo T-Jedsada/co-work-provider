@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
       console.log(form.value);
       this.users.email = form.value.email;
       this.users.password = form.value.password;
-      localStorage.setItem('email', this.users.email);
       this.auth.login(this.users).subscribe(
         success => {
           console.log(success);
@@ -36,7 +35,8 @@ export class LoginComponent implements OnInit {
             console.log(this.users.data.error);
             this.error = this.users.data.error;
           } else {
-            this.router.navigate(['/home']);
+            localStorage.setItem('email', this.users.email);
+            this.router.navigate(['/dashboard']);
           }
         },
         error => {
