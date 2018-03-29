@@ -1,13 +1,21 @@
-<div class="wrapper">
-  <div class="sidebar" data-background-color="white" data-active-color="danger">
-    <app-sidebar></app-sidebar>
-  </div>
-  <div class="main-panel">
-    <app-navbar></app-navbar>
-    <div class="content">
-      <router-outlet></router-outlet>
-    </div>
-    <app-footer></app-footer>
+<div *ngIf="checkLogin; else loggedin">
+  <div class="content">
+    <router-outlet></router-outlet>
   </div>
 </div>
-<app-fixedplugin></app-fixedplugin>
+
+<ng-template #loggedin>
+  <div class="wrapper" >
+    <div class="sidebar" data-background-color="white" data-active-color="danger">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="main-panel">
+      <app-navbar></app-navbar>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+      <app-footer></app-footer>
+    </div>
+  </div>
+  <!--<app-fixedplugin></app-fixedplugin>-->
+</ng-template>

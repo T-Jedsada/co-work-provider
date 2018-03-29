@@ -20,6 +20,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FixedpluginComponent } from './components/shared/fixedplugin/fixedplugin.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { CoworkingComponent } from './components/coworking/coworking.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     FixedpluginComponent,
     NavbarComponent,
     SidebarComponent,
+    CoworkingComponent,
   ],
   imports: [
       AlertModule.forRoot(),
