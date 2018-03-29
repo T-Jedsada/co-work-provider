@@ -13,6 +13,7 @@ const AppRoutes: Routes = [
     { path: 'sign-in', component: LoginComponent },
     { path: 'sign-up', component: RegisterComponent },
     { path: 'forgot-password', component: ForgotPasswordComponent },
+    { path: 'forgot', component: ForgotPasswordComponent },
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
     { path: 'co-working', component: CoworkingComponent, canActivate: [AuthGuard] },
     { path: '**', component: ErrorsComponent },

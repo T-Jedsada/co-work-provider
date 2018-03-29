@@ -12,11 +12,15 @@ export class AuthGuard implements CanActivate {
     if (localStorage.getItem('email') === null) {
       this.router.navigate(['/sign-in']);
       return false;
-    }
-    if (localStorage.getItem('email') === undefined) {
+    } else if (localStorage.getItem('email') === undefined) {
       this.router.navigate(['/sign-in']);
       return false;
+    } else {
+      return true;
     }
-    return true;
+  }
+  ffd (next: ActivatedRouteSnapshot,
+       state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+      return false;
   }
 }
